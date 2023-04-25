@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ComposeNewController">
+   <children>
+      <VBox layoutX="5.0" layoutY="4.0" prefHeight="392.0" prefWidth="591.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <HBox prefHeight="48.0" prefWidth="591.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sendMailHandler" prefHeight="34.0" prefWidth="120.0" text="Send" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <ComboBox fx:id="hostBox" maxWidth="1.7976931348623157E308" prefHeight="34.0" prefWidth="158.0" promptText="Select a Host" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="300.0" top="5.0" />
+                     </HBox.margin>
+                  </ComboBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="26.0" prefWidth="31.0" text="To:" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" top="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="toText" prefHeight="26.0" prefWidth="354.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" right="80.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="attachBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Attach" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="30.0" top="30.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox prefHeight="79.0" prefWidth="591.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="14.0" prefWidth="48.0" text="Subject:" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" top="30.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="subjectText" prefHeight="26.0" prefWidth="298.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="5.0" right="40.0" top="30.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="183.0" prefWidth="591.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <TextArea fx:id="writeText" prefHeight="146.0" prefWidth="593.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextArea>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

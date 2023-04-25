@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HostController">
+   <children>
+      <VBox layoutX="3.0" layoutY="6.0" prefHeight="390.0" prefWidth="590.0" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="1.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <HBox prefHeight="50.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Receive Protocol" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="30.0" top="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <RadioButton fx:id="imapBtn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="imap" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="protocol" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="pop3Btn" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="pop3" toggleGroup="$protocol" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </RadioButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Receive Port: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="15.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="receivePort" prefHeight="0.0" prefWidth="0.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Send Port:" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="sendPort" prefHeight="26.0" prefWidth="71.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" right="15.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Host Addresses: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="hostAddress" prefHeight="26.0" prefWidth="310.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="50.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="To Receive: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="20.0" right="15.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="toReceive" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="To Send: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="-10.0" right="15.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="toSend" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="20.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="99.0" text="Username: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets top="25.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets left="20.0" right="15.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="username" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="25.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Label text="Password: " HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="-10.0" top="25.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="password" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets left="10.0" right="20.0" top="25.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="50.0" prefWidth="590.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button alignment="CENTER" defaultButton="true" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#saveHandler" prefHeight="26.0" prefWidth="152.0" text="Save" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
